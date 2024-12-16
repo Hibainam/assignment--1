@@ -1,0 +1,196 @@
+body {
+  background-image: url("/public/background.jpeg");
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-repeat: no-repeat;
+  background-position: center; /* Centers the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0; /* Removes default margin for full-page coverage */
+  font-family: Arial, sans-serif;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.signup-form-container {
+  background-color: rgba(255, 255, 255, 0.822);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; /* Slightly larger for better desktop visibility */
+}
+
+.form-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.password-requirements {
+  margin-bottom: 20px;
+}
+
+.password-requirements ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.password-requirements li {
+  font-size: 14px;
+  color: #777;
+}
+
+.password-requirements .valid {
+  color: green;
+}
+
+.password-requirements .invalid {
+  color: red;
+}
+
+.captcha-section {
+  margin-bottom: 20px;
+}
+
+.captcha-preview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.captcha-input {
+  display: flex;
+  align-items: center;
+}
+
+.captcha-input input {
+  width: 80%;
+}
+
+.captcha-refresh {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.captcha-refresh i {
+  font-size: 18px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.account {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.account .link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.account .link:hover {
+  text-decoration: underline;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    height: auto; /* Allows flexibility on smaller screens */
+  }
+
+  .signup-form-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .form-title {
+    font-size: 24px;
+  }
+
+  .input-field {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .captcha-input input {
+    width: 70%; /* Adjusts captcha input size for mobile */
+  }
+
+  .captcha-refresh {
+    font-size: 14px; /* Makes refresh button more accessible on small screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .form-title {
+    font-size: 20px;
+  }
+
+  .input-field {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    font-size: 13px;
+    padding: 8px;
+  }
+}

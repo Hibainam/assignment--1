@@ -1,0 +1,235 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body and page background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+/* Container for the login page */
+.login-page {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+}
+
+/* Heading styles */
+.heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+  position: relative;
+}
+
+/* Input container styling */
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.input-field {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+}
+
+/* Icon inside input */
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Captcha styling */
+#captcha {
+  margin-bottom: 25px;
+}
+
+.preview {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.captcha_form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.captcha_refresh {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.captcha_refresh:hover {
+  transform: scale(1.2);
+}
+
+/* Button styling */
+.login-button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.login {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-button:hover .login {
+  text-decoration: underline;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Image background decoration */
+.login-page::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 120px;
+  height: 120px;
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/diagonal_stripes.png');
+  background-size: contain;
+  opacity: 0.2;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .login-page {
+      padding: 25px;
+      width: 90%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .heading {
+      font-size: 28px;
+      margin-bottom: 20px;
+  }
+
+  .input-field {
+      padding: 10px 15px;
+      font-size: 14px;
+  }
+
+  .login-button {
+      font-size: 16px;
+      padding: 10px 0;
+  }
+
+  .icon {
+      font-size: 18px;
+  }
+
+  .captcha-refresh {
+      font-size: 18px;
+  }
+}
+
+/* Large screen and tablet responsiveness */
+@media (min-width: 481px) and (max-width: 768px) {
+  .login-page {
+      padding: 30px;
+  }
+
+  .heading {
+      font-size: 30px;
+  }
+
+  .input-field {
+      padding: 10px 15px;
+      font-size: 15px;
+  }
+
+  .login-button {
+      font-size: 17px;
+  }
+}
+
+/* Desktop responsiveness */
+@media (min-width: 769px) {
+  .login-page {
+      padding: 40px;
+      max-width: 420px;
+  }
+
+  .heading {
+      font-size: 32px;
+  }
+
+  .input-field {
+      padding: 12px 20px;
+      font-size: 16px;
+  }
+
+  .login-button {
+      font-size: 18px;
+  }
+}
